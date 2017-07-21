@@ -1,9 +1,7 @@
- 
-//create s3 bucket
+#!/bin/bash/ 
 
+#create s3 bucket
 aws s3api create-bucket --bucket vedant_bucket --region us-east-1
 
-
-//paste a file to that specified bucket
-
+#paste a file to that specified bucket
 aws s3 cp binary.txt s3://vedant_bucket/
