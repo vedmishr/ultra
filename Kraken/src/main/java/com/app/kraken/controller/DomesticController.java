@@ -33,7 +33,7 @@ public class DomesticController {
 	}
  
 	@PutMapping("/domestic/update/{modelno}")
-	public ResponseEntity<Domestic> updateDining(@PathVariable long modelno,@RequestBody Domestic domestic)
+	public ResponseEntity<Domestic> updateDomestic(@PathVariable long modelno,@RequestBody Domestic domestic)
 	{
 		long status=0;
 			status = service.updateDomestic(domestic, modelno);
@@ -46,7 +46,7 @@ public class DomesticController {
 	}
 	
 	@GetMapping("/domestic/get/{modelno}")
-	public ResponseEntity<Domestic> getDining(@PathVariable long modelno )
+	public ResponseEntity<Domestic> getDomestic(@PathVariable long modelno )
 	{
 		Domestic domestic;
 			domestic= service.getDomestic(modelno);
